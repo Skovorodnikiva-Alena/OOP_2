@@ -31,7 +31,7 @@ class StringOperations {
     }
 
     // Метод для поиска слова с минимальным числом различных символов
-    public static String minСharacters(String sentence) {
+    public static String minСhars(String sentence) {
         String[] words = sentence.split("\s+"); //разделяет предложения на слова
         String minWord = words[0]; //первое слово
         int minUniqueChars = getUniqueChars(words[0]); //колличество уникальных символов
@@ -103,7 +103,7 @@ class Main {
 
         // c) Найти слово, в котором число различных символов минимально.
         String sentence = "fffff ab f 1234 jkjk";
-        System.out.println("Слово с минимальным числом различных символов: " + StringOperations.minСharacters(sentence));
+        System.out.println("Слово с минимальным числом различных символов: " + StringOperations.minСhars(sentence));
 
         // d) Предложение состоит из нескольких слов, разделенных пробелами.
         // Например: "One two three раз два три one1 two2 123 ". Найти количество
