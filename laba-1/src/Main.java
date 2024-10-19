@@ -24,7 +24,7 @@ class StringOperations {
     public static String getMiddle(String str) {
         if (str.length() % 2 == 0) { //длина строки
             int middleIndex = str.length() / 2; //средний индекс
-            return str.substring(middleIndex - 1, middleIndex + 1);
+            return str.substring(middleIndex - 1, middleIndex + 1); //два средних символа
         } else {
             return "";
         }
@@ -34,10 +34,10 @@ class StringOperations {
     public static String minСhars(String sentence) {
         String[] words = sentence.split("\s+"); //разделяет предложения на слова
         String minWord = words[0]; //первое слово
-        int minUniqueChars = getUniqueChars(words[0]); //колличество уникальных символов
+        int minUniqueChars = getUniqueChars(words[0]); //количество уникальных символов
 
         for (int i = 1; i < words.length; i++) {
-            int currentUniqueChars = getUniqueChars(words[i]);
+            int currentUniqueChars = getUniqueChars(words[i]); //подсчет уникальных символов в текущем слове
             if (currentUniqueChars < minUniqueChars) {
                 minWord = words[i];
                 minUniqueChars = currentUniqueChars;
@@ -51,9 +51,9 @@ class StringOperations {
     private static int getUniqueChars(String word) {
         Set<Character> uniqueChars = new HashSet<>();
         for (char c : word.toCharArray()) {
-            uniqueChars.add(c);
+            uniqueChars.add(c); //добавление символа в множество
         }
-        return uniqueChars.size();
+        return uniqueChars.size(); //возвращает символы
     }
 
     // Метод для подсчета слов, содержащих только символы латинского алфавита
