@@ -2,10 +2,19 @@ import colors.Color;
 import service.impl.ShapeServiceImpl;
 import shapes.*;
 
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
 import java.util.LinkedList;
 import java.util.List;
 public class Main{
     public static void main(String[] args) {
+        // Установка кодировки консоли в UTF-8
+        try {
+            System.setOut(new PrintStream(System.out, true, "UTF-8"));
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
         Triangle redTri = new Triangle(new Point(0,0),new Point(4,0), new Point(0,4));
         redTri.setColor(Color.RED);
 

@@ -53,7 +53,7 @@ public class Circle extends Shape{
     @Override
     public void draw() {
         if(!validate()) return;
-        System.out.println("Фигура круг");
+        System.out.println("Фигура: круг");
         System.out.println("Центр круга: (х = " + point.getX() + ", y = " + point.getY() + ")");
         System.out.println("Радиус круга: " + radius);
         System.out.println("Площадь круга: " + getArea());

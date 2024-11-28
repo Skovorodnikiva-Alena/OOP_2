@@ -80,7 +80,7 @@ public class Triangle extends Shape {
     }
 
     public void draw(){
-        System.out.println("Фигура Треугольник");
+        System.out.println("Фигура: треугольник");
         System.out.println("Точки диагонали треугольника:");
         System.out.println("Р1(x = " + P1.getX() + "; y = " + P1.getY() + ")");
         System.out.println("Р2(x = " + P2.getX() + "; y = " + P2.getY() + ")");

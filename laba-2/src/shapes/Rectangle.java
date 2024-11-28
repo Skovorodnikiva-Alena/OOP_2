@@ -57,7 +57,7 @@ public class Rectangle extends Shape{
     }
     public void draw(){
         if(!validate()) return;
-        System.out.println("Фигура Прямоугольник");
+        System.out.println("Фигура: прямоугольник");
         System.out.println("Точки диагонали прямоугольника: Р1(x = " + A.getX() + "; y = " + A.getY() + ") , Р2(x = " + C.getX() + "; y = " + C.getY() + ")");
         System.out.println("Площадь прямоугольника: " + getArea());
         System.out.println("Периметр прямоугольника: " + getPerimeter());
