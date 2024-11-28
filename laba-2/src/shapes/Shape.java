@@ -3,6 +3,28 @@ package shapes;
 import colors.Color;
 
 public abstract class Shape {
+    private Color color = Color.TRANSPARENT;
+    private double perimeter, area;
+    public void setColor(Color newColor){
+        this.color = newColor;
+    }
+    public Color getColor(){
+        return color;
+    }
+    public double getPerimeter(){
+        return perimeter;
+    }
+    public double getArea(){
+        return area;
+    }
+    public void move(double moveX, double moveY){
+
+    }
+    public void draw(){
+
+    }
+}
+/* public abstract class Shape {
 
     private Color color = Color.TRANSPARENT;
     private double x;
@@ -57,7 +79,7 @@ public abstract class Shape {
 }
 
 // Класс Точка
-class Point extends Shape {
+public class Point extends Shape {
 
     private double x;
     private double y;
@@ -383,4 +405,4 @@ class Circle extends Shape {
         center.setX(center.getX() + moveX);
         center.setY(center.getY() + moveY); // Перемещение точки
     }
-}
+}*/
