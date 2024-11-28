@@ -1,5 +1,5 @@
 import colors.Color;
-import service.impl.ShapeServiceImpl;
+import service.impl.serviceImpl;
 import shapes.*;
 
 import java.util.LinkedList;
@@ -29,7 +29,7 @@ public class Main{
         shapes.add(rect);
         shapes.add(point);
         shapes.add(blueTri);
-        ShapeServiceImpl impl = new ShapeServiceImpl();
+        serviceImpl impl = new serviceImpl();
         System.out.println(impl.getSquares(shapes));
         System.out.println(impl.getMaxPerimeters(shapes));
         System.out.println(impl.getColors(shapes));
