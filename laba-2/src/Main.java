@@ -2,7 +2,6 @@ import colors.Color;
 import service.impl.ShapeServiceImpl;
 import shapes.*;
 
-
 import java.util.LinkedList;
 import java.util.List;
 public class Main{
