@@ -1,4 +1,4 @@
-package com.example.utils;
+package org.utils;
 
 public class ArrayUtilsImpl implements ArrayUtils {
 

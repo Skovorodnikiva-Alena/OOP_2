@@ -1,4 +1,4 @@
-package com.example.utils;
+package org.utils;
 
 public interface ArrayUtils {
     <T> boolean some(T[] array, Condition<T> condition);
