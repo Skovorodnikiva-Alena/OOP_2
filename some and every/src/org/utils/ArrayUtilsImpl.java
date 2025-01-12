@@ -2,36 +2,38 @@ package org.utils;
 
 public class ArrayUtilsImpl implements ArrayUtils {
 
-    @Override
+    @Override //Используется для переопределения методов интерфейса.
+    //метод some: есть ли хотя бы один элемент массива, удовлетворяющий условию.
     public <T> boolean some(T[] array, Condition<T> condition) {
-        if (array == null) {
-            throw new IllegalArgumentException("Array cannot be null.");
+        if (array == null) { // Проверяет, не равен ли массив null
+            throw new IllegalArgumentException("Массив не может быть равен null");
         }
-        if (condition == null) {
-            throw new IllegalArgumentException("Condition cannot be null.");
+        if (condition == null) { //Проверяет, не равно ли условие null
+            throw new IllegalArgumentException("Условие не может быть нулевым");
         }
 
         for (T element : array) {
             if (condition.test(element)) {
-                return true;
+                return true; //Если test() возвращает true, то возвращает true
             }
         }
-        return false;
+        return false; // Если  все элементы не удовлетворяют условию, то возвращает false.
     }
 
     @Override
+    //метод every: проверяет, все ли элементы массива удовлетворяют условию
     public <T> boolean every(T[] array, Condition<T> condition) {
-        if (array == null) {
-            throw new IllegalArgumentException("Array cannot be null.");
+        if (array == null) { // Проверяет, не равен ли массив null
+            throw new IllegalArgumentException("Массив не может быть равен null");
         }
-        if (condition == null) {
-            throw new IllegalArgumentException("Condition cannot be null.");
+        if (condition == null) { //Проверяет, не равно ли условие null
+            throw new IllegalArgumentException("Условие не может быть нулевым");
         }
         for (T element : array) {
             if (!condition.test(element)) {
-                return false;
+                return false; // Если test() возвращает false, то возвращает false
             }
         }
-        return true;
+        return true; // Если  все элементы удовлетворяют условию, то возвращает true
     }
 }
